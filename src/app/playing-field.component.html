@@ -1,0 +1,19 @@
+<!-- Angular Structural Directives -->
+<div *ngIf="playingPlayers.length > 0">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Player No</th>
+        <th>Cards in Hand</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let i of playingPlayers">
+      <td>
+        <h3>player {{ playingPlayers.indexOf(i) }}</h3>
+      </td>
+      <td *ngFor="let j of i">
+        <img src="{{ j.imageUrl }}" width="100px">
+      </td>
+    </tr>
+  </table>
+</div>
